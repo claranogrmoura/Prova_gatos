@@ -1,11 +1,14 @@
 const btn = document.getElementById('btn');
+const btn2 = document.getElementById('btn2');
+
+btn2.addEventListener('click', fact2)
 
 btn.addEventListener('click', Gato) 
 function Gato() {
   fetch('https://catfact.ninja/fact')
     .then(resposta)
     .then(dados);
-   .catch(erro);
+  
 }
 
 function resposta(resp) {
@@ -17,6 +20,7 @@ function dados(d) {
   console.log(d.fact); 
  
 }
-function erro(Erro) {
-  console.error("Ocorreu um erro ao buscar os dados:", Erro);
-}
+ function fact2(){
+  fetch('main.php') .then(response => response.json()) .then(data => console.log(data))
+  console.clear()
+ }
