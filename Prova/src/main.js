@@ -1,11 +1,12 @@
 const btn = document.getElementById('btn');
 
-btn.addEventListener('click', function () {
+btn.addEventListener('click', Gato) 
+function Gato() {
   fetch('https://catfact.ninja/fact')
     .then(resposta)
     .then(dados);
    .catch(erro);
-});
+}
 
 function resposta(resp) {
   console.log("fatos sobre gatos");
